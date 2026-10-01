@@ -1,0 +1,89 @@
+/*
+ * Source stylesheet. The compiled result is ../assets/css/site.css (run build-css.sh).
+ * Fonts: Marcellus and Plus Jakarta Sans, SIL Open Font License (see ../assets/fonts/OFL.txt), latin subset only.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Self-hosted fonts ---- */
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/marcellus-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* One variable file covers every weight from 300 to 700 */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-latin-var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-latin-italic-var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---- The four rules from the original page ---- */
+body {
+  background-color: #FAF8F5;
+  color: #2D3748;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.serif-title {
+  font-family: 'Marcellus', serif;
+}
+.bg-warm-pattern {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(#e3eae3 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(227, 234, 227, 0.6);
+}
+
+/* ---- Icons (sprite at /assets/icons.svg) ---- */
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
+/* ---- Accessibility and small fixes ---- */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #527052;
+}
+:focus-visible {
+  outline: 3px solid #425a42;
+  outline-offset: 2px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+[hidden] {
+  display: none !important;
+}

@@ -1,87 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-GB" class="motion-safe:scroll-smooth scroll-pt-24">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T.Marshall Counselling | Warm & Compassionate Therapy Services</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        sage: {
-                            50: '#f4f7f4',
-                            100: '#e3eae3',
-                            200: '#c7d6c7',
-                            300: '#a3bca3',
-                            500: '#698a69',
-                            600: '#527052',
-                            700: '#425a42',
-                            800: '#374937',
-                            900: '#2f3d2f',
-                        },
-                        sand: {
-                            50: '#fdfbf7',
-                            100: '#f7f2e9',
-                            200: '#eee3d2',
-                            300: '#e1cdb2',
-                            500: '#bf9c72',
-                        },
-                        terracotta: {
-                            100: '#faeee9',
-                            500: '#c87a58',
-                            600: '#b46342',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Marcellus', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- PAGE TITLE AND SEARCH DESCRIPTION (what search engines and link previews show).
+         PRICES: the description here and the og:description below both mention the prices too. -->
+    <title>T.Marshall Counselling | Counselling in Middlesbrough, Teesside & Online</title>
+    <meta name="description" content="T. Marshall, BACP Accredited counsellor in Middlesbrough, Teesside, in person or online. One-to-one £50 for 60 minutes; group therapy £30 per person for two hours.">
+    <link rel="canonical" href="https://tmarshallcounselling.co.uk/">
 
-    <style>
-        body {
-            background-color: #FAF8F5;
-            color: #2D3748;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        .serif-title {
-            font-family: 'Marcellus', serif;
-        }
-        .bg-warm-pattern {
-            background-color: #FAF8F5;
-            background-image: radial-gradient(#e3eae3 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(227, 234, 227, 0.6);
-        }
-    </style>
+    <!-- Link previews (WhatsApp, Facebook, LinkedIn and similar) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="T.Marshall Counselling">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="https://tmarshallcounselling.co.uk/">
+    <meta property="og:title" content="T.Marshall Counselling | Counselling in Middlesbrough, Teesside & Online">
+    <meta property="og:description" content="T. Marshall, BACP Accredited counsellor in Middlesbrough, Teesside, in person or online. One-to-one £50 for 60 minutes; group therapy £30 per person for two hours.">
+    <meta property="og:image" content="https://tmarshallcounselling.co.uk/assets/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="T.Marshall Counselling">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#FAF8F5">
+
+    <!-- Icons, styles and script: all served from this website, nothing from other companies -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/assets/js/site.js" defer></script>
 </head>
 <body class="bg-warm-pattern text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Skip link: lets keyboard users jump straight past the header -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:text-sage-900 focus:font-semibold focus:px-5 focus:py-3 focus:rounded-full focus:shadow-lg">Skip to main content</a>
 
     <!-- Header / Navigation -->
     <header class="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-sage-100/80 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand Logo -->
-                <a href="#" class="flex items-center space-x-3 group">
+                <a href="/" class="flex items-center space-x-3 group">
                     <div class="w-10 h-10 rounded-full bg-sage-500 text-white flex items-center justify-center shadow-sm group-hover:bg-sage-600 transition">
-                        <i class="fa-solid fa-leaf text-lg"></i>
+                        <svg class="icon text-lg" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-leaf"></use></svg>
                     </div>
                     <div>
                         <span class="serif-title text-xl sm:text-2xl font-normal tracking-wide text-sage-900 block leading-tight">T.Marshall</span>
@@ -90,55 +51,68 @@
                 </a>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
-                    <a href="#about" class="hover:text-sage-600 transition">About Me</a>
-                    <a href="#services" class="hover:text-sage-600 transition">Services & Fees</a>
-                    <a href="#assessments" class="hover:text-sage-600 transition flex items-center space-x-1">
-                        <span>Self-Assessment</span>
+                <nav aria-label="Main" class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-700">
+                    <a href="#about" class="py-3 hover:text-sage-600 transition">About Me</a>
+                    <a href="#services" class="py-3 hover:text-sage-600 transition">Services & Fees</a>
+                    <a href="#assessments" class="py-3 hover:text-sage-600 transition flex items-center space-x-1">
+                        <span>Self-Assessments</span>
                         <span class="bg-sage-100 text-sage-700 text-xs px-2 py-0.5 rounded-full font-semibold">Interactive</span>
                     </a>
-                    <a href="#faq" class="hover:text-sage-600 transition">FAQ</a>
+                    <a href="#faq" class="py-3 hover:text-sage-600 transition">FAQ</a>
                 </nav>
 
                 <!-- Action Button -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="#contact" class="bg-sage-600 hover:bg-sage-700 text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5 flex items-center space-x-2">
-                        <i class="fa-regular fa-envelope"></i>
-                        <span>Get In Touch</span>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#contact" class="bg-sage-600 hover:bg-sage-700 text-white text-sm font-medium px-5 py-2.5 min-h-[44px] rounded-full shadow-sm hover:shadow transition-all transform motion-safe:hover:-translate-y-0.5 flex items-center space-x-2">
+                        <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-envelope"></use></svg>
+                        <span>Get in touch</span>
                     </a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-700 p-2 rounded-lg hover:bg-sage-100 transition" aria-label="Toggle menu">
-                    <i class="fa-solid fa-bars text-xl"></i>
+                <!-- Mobile menu button (site.js shows it; the menu needs JavaScript) -->
+                <button type="button" id="mobile-menu-btn" class="lg:hidden text-slate-700 w-11 h-11 flex items-center justify-center rounded-lg hover:bg-sage-100 transition" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" hidden>
+                    <svg class="icon text-xl" data-menu-icon="open" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-bars"></use></svg>
+                    <svg class="icon text-xl" data-menu-icon="close" aria-hidden="true" focusable="false" hidden><use href="/assets/icons.svg#i-xmark"></use></svg>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-sand-50 border-b border-sage-200 px-4 pt-3 pb-6 space-y-3">
-            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-sage-600">About Me</a>
-            <a href="#services" class="block py-2 text-slate-700 font-medium hover:text-sage-600">Services & Fees</a>
-            <a href="#assessments" class="block py-2 text-slate-700 font-medium hover:text-sage-600">Self-Assessments</a>
-            <a href="#faq" class="block py-2 text-slate-700 font-medium hover:text-sage-600">FAQ</a>
-            <a href="#contact" class="inline-block w-full text-center bg-sage-600 text-white font-medium py-3 rounded-full mt-2">Get In Touch</a>
-        </div>
+        <nav id="mobile-menu" aria-label="Main" class="lg:hidden bg-sand-50 border-b border-sage-200 px-4 pt-3 pb-6 space-y-1" hidden>
+            <a href="#about" class="block py-3 text-slate-700 font-medium hover:text-sage-600">About Me</a>
+            <a href="#services" class="block py-3 text-slate-700 font-medium hover:text-sage-600">Services & Fees</a>
+            <a href="#assessments" class="block py-3 text-slate-700 font-medium hover:text-sage-600">Self-Assessments</a>
+            <a href="#faq" class="block py-3 text-slate-700 font-medium hover:text-sage-600">FAQ</a>
+            <a href="#contact" class="inline-block w-full text-center bg-sage-600 text-white font-medium py-3 rounded-full mt-2">Get in touch</a>
+        </nav>
+
     </header>
 
-    <main class="flex-grow">
+    <!-- Without JavaScript the menu button above cannot work, so phones and tablets show these plain links instead (outside the sticky header so they scroll away) -->
+    <noscript>
+        <nav aria-label="Main" class="lg:hidden border-b border-sage-100/80 px-4 sm:px-6 flex flex-wrap justify-center gap-x-6 text-sm font-medium text-slate-700">
+            <a href="#about" class="inline-flex items-center min-h-[44px] hover:text-sage-600">About Me</a>
+            <a href="#services" class="inline-flex items-center min-h-[44px] hover:text-sage-600">Services & Fees</a>
+            <a href="#assessments" class="inline-flex items-center min-h-[44px] hover:text-sage-600">Self-Assessments</a>
+            <a href="#faq" class="inline-flex items-center min-h-[44px] hover:text-sage-600">FAQ</a>
+            <a href="#contact" class="inline-flex items-center min-h-[44px] font-semibold text-sage-800 underline hover:text-sage-600">Get in touch</a>
+        </nav>
+    </noscript>
+
+    <main id="main" class="flex-grow focus:outline-none" tabindex="-1">
         <!-- Hero Section -->
         <section class="relative py-16 lg:py-24 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
-                    
+
                     <div class="lg:col-span-7 space-y-6">
                         <div class="flex flex-wrap items-center gap-2">
                             <div class="inline-flex items-center space-x-2 bg-sage-100/80 text-sage-800 px-4 py-1.5 rounded-full text-sm font-medium border border-sage-200">
-                                <i class="fa-solid fa-heart text-terracotta-500 text-xs"></i>
-                                <span>A Calm, Confidential & Non-Judgemental Space</span>
+                                <svg class="icon text-terracotta-500 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-heart"></use></svg>
+                                <span>A calm, confidential & non-judgemental space</span>
                             </div>
                             <div class="inline-flex items-center space-x-1.5 bg-sage-800 text-sand-100 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-sm border border-sage-700">
-                                <i class="fa-solid fa-award text-amber-300"></i>
+                                <svg class="icon text-amber-300" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-award"></use></svg>
                                 <span>BACP Accredited</span>
                             </div>
                         </div>
@@ -146,51 +120,52 @@
                             Find clarity, healing, and strength on your journey.
                         </h1>
                         <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                            Welcome. I’m T.Marshall, a BACP Accredited counsellor dedicated to providing gentle, empathetic, and evidence-based support tailored to your unique personal experience.
+                            Welcome. I’m T. Marshall, a counsellor dedicated to providing gentle, empathetic, and evidence-based support tailored to you and your own experience.
                         </p>
-                        
+
                         <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
                             <a href="#contact" class="bg-sage-600 hover:bg-sage-700 text-white px-7 py-3.5 rounded-full text-center font-medium shadow-md hover:shadow-lg transition-all flex items-center justify-center space-x-2">
-                                <span>Book Initial Session</span>
-                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                                <span>Arrange a first session</span>
+                                <svg class="icon text-sm" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow-right"></use></svg>
                             </a>
                             <a href="#assessments" class="bg-white hover:bg-sand-100 text-sage-800 border border-sage-200 px-7 py-3.5 rounded-full text-center font-medium transition-all flex items-center justify-center space-x-2">
-                                <i class="fa-solid fa-clipboard-check text-sage-500"></i>
-                                <span>Check Anxiety & Depression Levels</span>
+                                <svg class="icon text-sage-500" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-clipboard-check"></use></svg>
+                                <span>Try a depression or anxiety self-assessment</span>
                             </a>
                         </div>
 
-                        <!-- Key Highlights -->
-                        <div class="pt-8 border-t border-sage-200/60 grid grid-cols-3 gap-4 text-center sm:text-left">
+                        <!-- Key Highlights.
+                             PRICES: these must match the page description at the top of this file, the Services & Fees cards, the FAQ, the contact form options and the footer. -->
+                        <div class="pt-8 border-t border-sage-200/60 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center sm:text-left">
                             <div>
-                                <p class="text-2xl font-bold text-sage-900 serif-title">£50 <span class="text-xs font-normal text-slate-500">/ hr</span></p>
-                                <p class="text-xs text-slate-500 font-medium mt-0.5">1-to-1 Sessions</p>
+                                <p class="text-2xl font-bold text-sage-900 serif-title">£50 <span class="text-xs font-normal text-slate-600">/ session</span></p>
+                                <p class="text-xs text-slate-600 font-medium mt-0.5">One-to-one counselling, 60 minutes</p>
                             </div>
                             <div>
-                                <p class="text-2xl font-bold text-sage-900 serif-title">£30 <span class="text-xs font-normal text-slate-500">/ person</span></p>
-                                <p class="text-xs text-slate-500 font-medium mt-0.5">Group Therapy (Min. 8)</p>
+                                <p class="text-2xl font-bold text-sage-900 serif-title">£30 <span class="text-xs font-normal text-slate-600">/ person</span></p>
+                                <p class="text-xs text-slate-600 font-medium mt-0.5">Group therapy: £30 per person for a two-hour session (minimum 8 people)</p>
                             </div>
                             <div>
-                                <p class="text-2xl font-bold text-sage-900 serif-title">Online & In-Person</p>
-                                <p class="text-xs text-slate-500 font-medium mt-0.5">Flexible Formats</p>
+                                <p class="text-2xl font-bold text-sage-900 serif-title">In person or online</p>
+                                <p class="text-xs text-slate-600 font-medium mt-0.5">Flexible formats</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="lg:col-span-5 relative">
                         <div class="relative mx-auto max-w-md lg:max-w-none">
-                            <div class="absolute -top-4 -left-4 w-72 h-72 bg-sand-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+                            <div class="absolute -top-4 -left-4 w-72 h-72 bg-sand-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 motion-safe:animate-pulse"></div>
                             <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-sage-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
-                            
+
                             <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-sage-100">
-                                <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80&w=800" 
-                                     alt="Calm therapy space" 
-                                     class="rounded-2xl object-cover h-[420px] w-full"
-                                     onerror="this.onerror=null; this.src='https://placehold.co/600x800/e3eae3/374937?text=Warm+Calming+Environment';">
+                                <!-- Decorative illustration (no photo), so it has empty alt text -->
+                                <img src="/assets/img/hero.svg" alt="" width="445" height="420" decoding="async"
+                                     class="rounded-2xl object-cover h-[420px] w-full">
+                                <!-- AVAILABILITY: change or remove this line if you are not taking new clients -->
                                 <div class="absolute bottom-8 left-8 right-8 glass-card p-4 rounded-xl shadow-md border border-white/60">
                                     <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
-                                        <p class="text-xs font-semibold text-sage-900">Accepting New Clients • In-Person & Remote</p>
+                                        <div class="w-3 h-3 bg-emerald-500 rounded-full flex-shrink-0 motion-safe:animate-ping"></div>
+                                        <p class="text-xs font-semibold text-sage-900">Accepting new clients • In person or online</p>
                                     </div>
                                 </div>
                             </div>
@@ -205,66 +180,62 @@
         <section id="about" class="py-16 sm:py-24 bg-sand-100/60 border-y border-sage-200/40">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-12 items-start">
-                    
-                    <div class="lg:col-span-5 sticky top-28">
+
+                    <div class="lg:col-span-5 lg:sticky lg:top-28">
                         <div class="relative group">
-                            <!-- NOTE: When deploying live, replace the src below with your image file path (e.g. src="images/t-marshall.jpg") -->
-                            <img id="profile-img" src="20230922_200003.jpg"T.Marshall Counsellor" 
-                                 class="rounded-3xl shadow-lg w-full h-[460px] object-cover transition duration-300 group-hover:brightness-95"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x800/d7e3d7/2f3d2f?text=T.+Marshall';">
-                            
-                            <!-- Interactive Upload Button for Live Preview -->
-                            <label for="photo-upload-input" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-sage-900 text-xs font-semibold px-3 py-2 rounded-full shadow-md cursor-pointer backdrop-blur-sm transition flex items-center space-x-1.5 border border-sage-200">
-                                <i class="fa-solid fa-camera text-sage-600"></i>
-                                <span>Upload Your Photo</span>
-                            </label>
-                            <input type="file" id="photo-upload-input" accept="image/*" class="hidden" onchange="previewProfilePhoto(event)">
+                            <!-- PHOTO: to change it, replace assets/img/t-marshall.jpg and assets/img/t-marshall.webp.
+                                 Please send a new photo to the maintainer to be resized first, rather than uploading a phone original. -->
+                            <picture class="block">
+                                <source srcset="/assets/img/t-marshall.webp" type="image/webp">
+                                <img id="profile-img" src="/assets/img/t-marshall.jpg" alt="T. Marshall, counsellor" width="1000" height="1013" loading="lazy" decoding="async"
+                                     class="rounded-3xl shadow-lg w-full h-[460px] object-cover transition duration-300 group-hover:brightness-95">
+                            </picture>
 
                             <div class="absolute -bottom-6 -right-4 sm:right-4 bg-sage-900 text-white p-5 rounded-2xl shadow-xl max-w-xs border border-sage-700">
-                                <p class="serif-title text-base italic font-light leading-snug">"Through lived experience and professional guidance, true transformation is always possible."</p>
-                                <p class="text-xs text-sage-300 mt-2 font-medium">— T. Marshall, MBACP Accred</p>
+                                <p class="serif-title text-base italic font-light leading-snug">“Through lived experience and professional guidance, true transformation is possible.”</p>
+                                <p class="text-xs text-sage-300 mt-2 font-medium">— T. Marshall, MBACP (Accred)</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="lg:col-span-7 space-y-6">
                         <div class="inline-flex items-center space-x-2 bg-sage-100 text-sage-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border border-sage-200">
-                            <i class="fa-solid fa-award text-sage-600"></i>
-                            <span>BACP Accredited • 20+ Years Experience</span>
+                            <svg class="icon text-sage-600" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-award"></use></svg>
+                            <span>BACP Accredited • 20+ Years’ Experience</span>
                         </div>
-                        
+
                         <h2 class="serif-title text-3xl sm:text-4xl text-sage-900 leading-tight">My Journey & Philosophy</h2>
-                        
+
                         <p class="text-slate-700 leading-relaxed text-base">
-                            Growing up in the Teesside area of Middlesbrough, my early life was shaped by trauma and addiction—experiences that deeply impacted the decisions and directions available to me at the time. Through that darkness, I was fortunate to receive the support, care, and guidance necessary to rebuild my life. That transformation lit a profound desire in me to give back and dedicate my life to helping others find their path to healing.
+                            I grew up in Middlesbrough, in Teesside, and my early life was shaped by trauma and addiction – experiences that deeply affected the choices open to me at the time. Through that darkness, I was fortunate to receive the support, care, and guidance I needed to rebuild my life. That transformation gave me a deep desire to give back and to dedicate myself to helping others find their own path to healing.
                         </p>
 
                         <p class="text-slate-700 leading-relaxed text-base">
-                            For around 20 years now, I have worked continuously in the counselling field. My journey began in residential care, where I spent many years supporting individuals working through severe substance abuse and addiction recovery. Transitioning into broader community care, I expanded my practice to support people navigating a wide spectrum of mental health challenges, including trauma, depression, severe anxiety, and life transitions.
+                            For around 20 years now, I have worked continuously in the counselling field. I began in residential care, where I spent many years supporting people through severe substance misuse and recovery from addiction. Moving into broader community care, I expanded my practice to support people with a wide range of mental health challenges, including trauma, depression, severe anxiety, and life transitions.
                         </p>
 
                         <p class="text-slate-700 leading-relaxed text-base">
-                            Today, I work alongside the NHS and local community organizations, providing accessible, compassionate, and empowering therapeutic support. My approach combines lived empathy with 20 years of clinical practice, providing you with a safe, non-judgemental environment where you are genuinely heard, respected, and empowered to create lasting positive change.
+                            Today, I work alongside the NHS and local community organisations, offering accessible, compassionate, and empowering therapeutic support. My approach combines lived experience with 20 years of clinical practice, giving you a safe, non-judgemental space where you are genuinely heard and respected, and supported to make lasting positive change.
                         </p>
 
                         <!-- Key Milestones Cards -->
                         <div class="grid sm:grid-cols-2 gap-4 pt-4">
                             <div class="bg-white p-4 rounded-2xl border border-sage-200 shadow-sm space-y-2">
                                 <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center font-bold text-lg">
-                                    <i class="fa-solid fa-hands-holding-child"></i>
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-hands-holding-child"></use></svg>
                                 </div>
-                                <h4 class="font-bold text-sage-900 text-sm">Lived Empathy & Grounded Support</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed">
-                                    Rooted in Teesside, my background gives me a genuine, deeply authentic understanding of how trauma and adversity affect life choices.
+                                <h3 class="font-bold text-sage-900 text-sm">Lived Experience & Grounded Support</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    Rooted in Teesside, my background gives me a genuine understanding of how trauma and adversity affect life choices.
                                 </p>
                             </div>
 
                             <div class="bg-white p-4 rounded-2xl border border-sage-200 shadow-sm space-y-2">
                                 <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center font-bold text-lg">
-                                    <i class="fa-solid fa-house-chimney-medical"></i>
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-house-chimney-medical"></use></svg>
                                 </div>
-                                <h4 class="font-bold text-sage-900 text-sm">Residential Care & NHS Collaboration</h4>
-                                <p class="text-xs text-slate-600 leading-relaxed">
+                                <h3 class="font-bold text-sage-900 text-sm">Residential Care & NHS Collaboration</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
                                     20 years spanning residential addiction recovery, community mental health care, and NHS partnerships.
                                 </p>
                             </div>
@@ -273,16 +244,16 @@
                         <!-- Credentials Banner -->
                         <div class="bg-sage-900 text-sand-100 p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4 mt-6">
                             <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 rounded-full bg-sage-800 flex items-center justify-center text-amber-300">
-                                    <i class="fa-solid fa-shield-check text-xl"></i>
+                                <div class="w-10 h-10 rounded-full bg-sage-800 flex items-center justify-center text-amber-300 flex-shrink-0">
+                                    <svg class="icon text-xl" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-shield-halved"></use></svg>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-sm">BACP Accredited Counsellor</p>
-                                    <p class="text-xs text-sage-300">20+ Years Clinical Experience • NHS & Community Partner</p>
+                                    <p class="font-bold text-sm">BACP Accredited counsellor</p>
+                                    <p class="text-xs text-sage-300">20+ Years’ Clinical Experience • NHS and Community Partner</p>
                                 </div>
                             </div>
-                            <a href="#contact" class="text-xs bg-sage-600 hover:bg-sage-500 text-white font-medium px-4 py-2.5 rounded-full transition shadow-sm">
-                                Reach Out Today
+                            <a href="#contact" class="text-sm bg-sage-600 hover:bg-sage-700 text-white font-medium px-5 py-2.5 min-h-[44px] inline-flex items-center rounded-full transition shadow-sm focus-visible:outline-sand-100">
+                                Get in touch
                             </a>
                         </div>
                     </div>
@@ -298,53 +269,54 @@
                     <span class="text-xs font-bold uppercase tracking-wider text-sage-600">Transparent Pricing</span>
                     <h2 class="serif-title text-3xl sm:text-4xl text-sage-900">Therapy Options & Clear Rates</h2>
                     <p class="text-slate-600">
-                        Investing in your emotional health is vital. Here are the structured options available for individual care and group support.
+                        Investing in your emotional health matters. Here are the options available for one-to-one counselling and group support.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
-                    
-                    <!-- Individual Counseling Card -->
+
+                    <!-- One-to-One Counselling Card -->
                     <div class="bg-white rounded-3xl p-8 border border-sage-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden">
                         <div class="absolute top-0 right-0 bg-sage-100 text-sage-800 text-xs font-semibold px-4 py-1.5 rounded-bl-2xl">
                             Most Popular
                         </div>
                         <div>
                             <div class="w-12 h-12 bg-sage-100 text-sage-700 rounded-2xl flex items-center justify-center text-xl mb-6">
-                                <i class="fa-solid fa-user"></i>
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-user"></use></svg>
                             </div>
-                            <h3 class="serif-title text-2xl text-sage-900">Individual Counselling</h3>
+                            <h3 class="serif-title text-2xl text-sage-900">One-to-One Counselling</h3>
                             <p class="text-slate-600 text-sm mt-2">
-                                Dedicated one-on-one sessions tailored specifically to your emotional needs, coping mechanisms, and personal goals.
+                                Dedicated one-to-one sessions tailored to your emotional needs, coping strategies, and personal goals.
                             </p>
 
+                            <!-- PRICE: one-to-one sessions -->
                             <div class="my-6 p-4 bg-sand-50 rounded-2xl border border-sand-200">
                                 <div class="flex items-baseline space-x-1">
                                     <span class="serif-title text-4xl font-bold text-sage-900">£50</span>
                                     <span class="text-slate-600 font-medium">/ 60-minute session</span>
                                 </div>
-                                <p class="text-xs text-slate-500 mt-1">Available In-Person or Online (Zoom/Teams)</p>
+                                <p class="text-xs text-slate-600 mt-1">Available in person or online (Zoom or Teams)</p>
                             </div>
 
                             <ul class="space-y-3 text-sm text-slate-600">
                                 <li class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
+                                    <svg class="icon text-emerald-600 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
                                     <span>Personalised therapy plan</span>
                                 </li>
                                 <li class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
-                                    <span>Anxiety, depression, grief & stress focus</span>
+                                    <svg class="icon text-emerald-600 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
+                                    <span>Support with anxiety, depression, grief, and stress</span>
                                 </li>
                                 <li class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
+                                    <svg class="icon text-emerald-600 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
                                     <span>Flexible weekly or fortnightly scheduling</span>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="mt-8">
-                            <a href="#contact" onclick="preselectService('Individual Counselling')" class="block w-full py-3 text-center bg-sage-600 hover:bg-sage-700 text-white font-medium rounded-full transition shadow-sm">
-                                Book Individual Session
+                            <a href="#contact" data-service="One-to-one counselling" class="block w-full py-3 text-center bg-sage-600 hover:bg-sage-700 text-white font-medium rounded-full transition shadow-sm">
+                                Enquire about one-to-one sessions
                             </a>
                         </div>
                     </div>
@@ -352,43 +324,44 @@
                     <!-- Group Therapy Card -->
                     <div class="bg-white rounded-3xl p-8 border border-sage-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative">
                         <div>
-                            <div class="w-12 h-12 bg-sand-200 text-sand-800 rounded-2xl flex items-center justify-center text-xl mb-6">
-                                <i class="fa-solid fa-people-group"></i>
+                            <div class="w-12 h-12 bg-sand-200 text-slate-800 rounded-2xl flex items-center justify-center text-xl mb-6">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-people-group"></use></svg>
                             </div>
                             <h3 class="serif-title text-2xl text-sage-900">Group Therapy Sessions</h3>
                             <p class="text-slate-600 text-sm mt-2">
-                                Shared support groups offering shared experiences, mutual encouragement, and structured group discussions.
+                                Supportive groups offering shared experience, mutual encouragement, and structured discussion.
                             </p>
 
+                            <!-- PRICE: group therapy -->
                             <div class="my-6 p-4 bg-sand-50 rounded-2xl border border-sand-200">
                                 <div class="flex items-baseline space-x-1">
-                                    <span class="serif-title text-4xl font-bold text-sage-900">£120</span>
-                                    <span class="text-slate-600 font-medium">/ hour total group rate</span>
+                                    <span class="serif-title text-4xl font-bold text-sage-900">£30</span>
+                                    <span class="text-slate-600 font-medium">/ person</span>
                                 </div>
                                 <div class="mt-2 text-xs bg-sage-100 text-sage-800 px-3 py-1 rounded-full inline-block font-medium">
-                                    Minimum 8 participants (£30 per head for 2-hr sessions)
+                                    £30 per person for a two-hour session (minimum 8 people)
                                 </div>
                             </div>
 
                             <ul class="space-y-3 text-sm text-slate-600">
                                 <li class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
+                                    <svg class="icon text-emerald-600 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
                                     <span>Safe group environment for peer growth</span>
                                 </li>
                                 <li class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
-                                    <span>Focused topics: Stress management, anxiety coping</span>
+                                    <svg class="icon text-emerald-600 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
+                                    <span>Focused topics: stress management and coping with anxiety</span>
                                 </li>
                                 <li class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-check text-emerald-600 text-xs"></i>
-                                    <span>Cost-effective collaborative approach</span>
+                                    <svg class="icon text-emerald-600 text-xs" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
+                                    <span>A cost-effective, collaborative approach</span>
                                 </li>
                             </ul>
                         </div>
 
                         <div class="mt-8">
-                            <a href="#contact" onclick="preselectService('Group Therapy')" class="block w-full py-3 text-center bg-sand-200 hover:bg-sand-300 text-sage-900 font-medium rounded-full transition">
-                                Enquire About Group Therapy
+                            <a href="#contact" data-service="Group therapy" class="block w-full py-3 text-center bg-sand-200 hover:bg-sand-300 text-sage-900 font-medium rounded-full transition">
+                                Enquire about group therapy
                             </a>
                         </div>
                     </div>
@@ -397,114 +370,257 @@
             </div>
         </section>
 
-        <!-- Interactive Self-Assessment Forms Section -->
+        <!-- Interactive Self-Assessment Section (PHQ-9 and GAD-7).
+             The questions and scoring live in assets/js/site.js and use the exact published wording: please do not reword them. -->
         <section id="assessments" class="py-16 bg-sage-900 text-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
                     <span class="text-xs font-bold uppercase tracking-widest text-sage-300">Self-Reflection Tools</span>
                     <h2 class="serif-title text-3xl sm:text-4xl text-sand-100">Depression & Anxiety Self-Assessments</h2>
                     <p class="text-sage-200 text-sm sm:text-base">
-                        Use these clinical screening forms (PHQ-7 / PHQ-9 & GAD-7) to better understand your emotional well-being. These tools are completely confidential and calculated instantly on your browser.
+                        The PHQ-9 (for depression) and GAD-7 (for anxiety) are widely used screening questionnaires. They can help you reflect on how you have been feeling, but they are not a diagnosis. Your score is worked out in your own browser. Your answers are never sent or saved, and your result (the total score only) is sent only if you choose to add it to a message.
                     </p>
                 </div>
 
-                <!-- Form Selector Tabs -->
-                <div class="flex justify-center mb-8">
-                    <div class="bg-sage-800/80 p-1.5 rounded-full inline-flex border border-sage-700/80 space-x-1">
-                        <button id="tab-phq" onclick="switchAssessmentTab('phq')" class="px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-sage-600 text-white shadow">
-                            <i class="fa-solid fa-heart-pulse mr-2"></i>PHQ Depression Check
-                        </button>
-                        <button id="tab-gad" onclick="switchAssessmentTab('gad')" class="px-5 py-2.5 rounded-full text-sm font-medium transition-all text-sage-300 hover:text-white">
-                            <i class="fa-solid fa-brain mr-2"></i>GAD-7 Anxiety Scale
-                        </button>
+                <noscript>
+                    <p class="max-w-3xl mx-auto mb-8 text-center text-sand-100 text-base">The self-assessment questionnaires need JavaScript to work. The contact form further down works without it, and the urgent-help information below is always available.</p>
+                </noscript>
+
+                <!-- Questionnaires: shown by site.js (hidden when JavaScript is off) -->
+                <div id="selfcheck" hidden>
+
+                    <!-- Questionnaire tabs -->
+                    <div class="flex justify-center mb-8">
+                        <div role="tablist" aria-label="Choose a questionnaire" class="bg-sage-800/80 p-1.5 rounded-full flex w-full sm:w-auto sm:inline-flex border border-sage-700/80 gap-1">
+                            <button type="button" role="tab" id="tab-phq" data-tab="phq" aria-selected="true" aria-controls="panel-phq" tabindex="0" class="flex-1 sm:flex-none px-4 sm:px-5 py-2.5 min-h-[44px] rounded-full text-sm font-medium transition-all focus-visible:outline-sand-100 bg-sage-600 text-white shadow ring-2 ring-sage-300">
+                                <svg class="icon mr-2" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-heart-pulse"></use></svg>PHQ-9 Depression Check
+                            </button>
+                            <button type="button" role="tab" id="tab-gad" data-tab="gad" aria-selected="false" aria-controls="panel-gad" tabindex="-1" class="flex-1 sm:flex-none px-4 sm:px-5 py-2.5 min-h-[44px] rounded-full text-sm font-medium transition-all focus-visible:outline-sand-100 text-sage-300 hover:text-white">
+                                <svg class="icon mr-2" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-brain"></use></svg>GAD-7 Anxiety Check
+                            </button>
+                        </div>
                     </div>
+
+                    <!-- Assessment Container Card -->
+                    <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto shadow-2xl relative">
+
+                        <!-- "If you need help now" box (short crisis box) -->
+                        <div class="bg-sand-100 border border-sand-300 p-4 rounded-2xl mb-8 flex items-start gap-3 text-sm sm:text-base text-slate-700">
+                            <svg class="icon text-terracotta-500 text-lg mt-0.5" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                            <div class="space-y-2">
+                                <p><strong>If you need help now.</strong> If you are in immediate danger or cannot keep yourself safe, call <a href="tel:999" class="font-bold text-sage-900 underline">999</a> or go to A&E. For urgent mental health help, call <a href="tel:111" class="font-bold text-sage-900 underline">NHS 111</a> and choose the mental health option. To talk to someone at any time, call <strong>Samaritans</strong> free on <a href="tel:116123" class="font-bold text-sage-900 underline">116 123</a>. This website and its contact form are not monitored for emergencies.</p>
+                                <p><a href="#urgent-help" class="font-semibold text-sage-800 underline">More places to get urgent help</a></p>
+                            </div>
+                        </div>
+
+                        <!-- PHQ-9 (depression) -->
+                        <div id="panel-phq" role="tabpanel" aria-labelledby="tab-phq" class="space-y-8">
+                            <div class="border-b border-slate-200 pb-4">
+                                <h3 id="phq-heading" class="serif-title text-2xl text-sage-900">PHQ-9 Depression Self-Assessment</h3>
+                                <p id="phq-stem" class="text-sm text-slate-600 mt-1">
+                                    Over the <strong>last 2 weeks</strong>, how often have you been bothered by any of the following problems?
+                                </p>
+                            </div>
+
+                            <form id="phq-form" class="space-y-6" autocomplete="off" data-questionnaire="phq" aria-labelledby="phq-heading" aria-describedby="phq-stem">
+                                <!-- The nine questions are added here by site.js -->
+                                <div class="space-y-6" data-questions></div>
+
+                                <p class="text-sm font-semibold text-rose-700" role="alert" data-missing hidden></p>
+
+                                <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                    <button type="submit" class="w-full sm:w-auto bg-sage-600 hover:bg-sage-700 text-white font-medium px-8 py-3.5 rounded-full shadow transition-all flex items-center justify-center space-x-2">
+                                        <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-calculator"></use></svg>
+                                        <span>Calculate depression score</span>
+                                    </button>
+                                    <button type="reset" class="w-full sm:w-auto min-h-[44px] px-5 py-2.5 rounded-full border border-slate-300 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition">
+                                        Reset questionnaire
+                                    </button>
+                                    <span class="sr-only" role="status" data-reset-status></span>
+                                </div>
+                            </form>
+
+                            <!-- PHQ-9 result (filled in by site.js) -->
+                            <div id="phq-result" class="mt-8 p-6 bg-sand-50 rounded-2xl border border-sage-200 space-y-4" role="status" aria-live="polite" tabindex="-1" hidden>
+                                <div data-q9-slot hidden></div>
+                                <div class="flex items-center justify-between gap-3">
+                                    <span data-result-badge class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide"></span>
+                                    <span class="text-xs text-slate-600">Your result</span>
+                                </div>
+                                <div>
+                                    <h4 data-result-title class="serif-title text-2xl text-sage-900">PHQ-9 score</h4>
+                                    <p data-result-text class="text-base text-slate-700 mt-2 leading-relaxed"></p>
+                                </div>
+
+                                <div class="bg-sand-100 border border-sand-300 p-4 rounded-2xl flex items-start gap-3 text-sm sm:text-base text-slate-700">
+                                    <svg class="icon text-terracotta-500 text-lg mt-0.5" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                    <div class="space-y-2">
+                                        <p><strong>If you need help now.</strong> If you are in immediate danger or cannot keep yourself safe, call <a href="tel:999" class="font-bold text-sage-900 underline">999</a> or go to A&E. For urgent mental health help, call <a href="tel:111" class="font-bold text-sage-900 underline">NHS 111</a> and choose the mental health option. To talk to someone at any time, call <strong>Samaritans</strong> free on <a href="tel:116123" class="font-bold text-sage-900 underline">116 123</a>. This website and its contact form are not monitored for emergencies.</p>
+                                        <p><a href="#urgent-help" class="font-semibold text-sage-800 underline">More places to get urgent help</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-xl border border-sage-100 space-y-3" data-add-row>
+                                    <p class="text-sm text-slate-700">
+                                        <svg class="icon text-amber-500 mr-1" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-lightbulb"></use></svg>
+                                        If you would like to share this result with T. Marshall, you can add it to your message. It is only sent if you then send the message.
+                                    </p>
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                                        <button type="button" data-add-result="phq" class="text-sm bg-sage-800 text-white font-medium px-5 py-2.5 min-h-[44px] rounded-full hover:bg-sage-900 transition inline-flex items-center justify-center gap-2">
+                                            <span>Add this result to my message</span>
+                                            <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow-down"></use></svg>
+                                        </button>
+                                        <p class="text-sm font-semibold text-sage-800" data-add-confirm hidden>Added to your message.</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600">If you add this result to a message, only the total score is sent.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GAD-7 (anxiety) -->
+                        <div id="panel-gad" role="tabpanel" aria-labelledby="tab-gad" class="space-y-8" hidden>
+                            <div class="border-b border-slate-200 pb-4">
+                                <h3 id="gad-heading" class="serif-title text-2xl text-sage-900">GAD-7 Anxiety Self-Assessment</h3>
+                                <p id="gad-stem" class="text-sm text-slate-600 mt-1">
+                                    Over the <strong>last 2 weeks</strong>, how often have you been bothered by the following problems?
+                                </p>
+                            </div>
+
+                            <form id="gad-form" class="space-y-6" autocomplete="off" data-questionnaire="gad" aria-labelledby="gad-heading" aria-describedby="gad-stem">
+                                <!-- The seven questions are added here by site.js -->
+                                <div class="space-y-6" data-questions></div>
+
+                                <p class="text-sm font-semibold text-rose-700" role="alert" data-missing hidden></p>
+
+                                <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                    <button type="submit" class="w-full sm:w-auto bg-sage-600 hover:bg-sage-700 text-white font-medium px-8 py-3.5 rounded-full shadow transition-all flex items-center justify-center space-x-2">
+                                        <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-calculator"></use></svg>
+                                        <span>Calculate anxiety score</span>
+                                    </button>
+                                    <button type="reset" class="w-full sm:w-auto min-h-[44px] px-5 py-2.5 rounded-full border border-slate-300 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition">
+                                        Reset questionnaire
+                                    </button>
+                                    <span class="sr-only" role="status" data-reset-status></span>
+                                </div>
+                            </form>
+
+                            <!-- GAD-7 result (filled in by site.js) -->
+                            <div id="gad-result" class="mt-8 p-6 bg-sand-50 rounded-2xl border border-sage-200 space-y-4" role="status" aria-live="polite" tabindex="-1" hidden>
+                                <div class="flex items-center justify-between gap-3">
+                                    <span data-result-badge class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide"></span>
+                                    <span class="text-xs text-slate-600">Your result</span>
+                                </div>
+                                <div>
+                                    <h4 data-result-title class="serif-title text-2xl text-sage-900">GAD-7 score</h4>
+                                    <p data-result-text class="text-base text-slate-700 mt-2 leading-relaxed"></p>
+                                </div>
+
+                                <div class="bg-sand-100 border border-sand-300 p-4 rounded-2xl flex items-start gap-3 text-sm sm:text-base text-slate-700">
+                                    <svg class="icon text-terracotta-500 text-lg mt-0.5" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                    <div class="space-y-2">
+                                        <p><strong>If you need help now.</strong> If you are in immediate danger or cannot keep yourself safe, call <a href="tel:999" class="font-bold text-sage-900 underline">999</a> or go to A&E. For urgent mental health help, call <a href="tel:111" class="font-bold text-sage-900 underline">NHS 111</a> and choose the mental health option. To talk to someone at any time, call <strong>Samaritans</strong> free on <a href="tel:116123" class="font-bold text-sage-900 underline">116 123</a>. This website and its contact form are not monitored for emergencies.</p>
+                                        <p><a href="#urgent-help" class="font-semibold text-sage-800 underline">More places to get urgent help</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white p-4 rounded-xl border border-sage-100 space-y-3" data-add-row>
+                                    <p class="text-sm text-slate-700">
+                                        <svg class="icon text-amber-500 mr-1" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-lightbulb"></use></svg>
+                                        If you would like to share this result with T. Marshall, you can add it to your message. It is only sent if you then send the message.
+                                    </p>
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                                        <button type="button" data-add-result="gad" class="text-sm bg-sage-800 text-white font-medium px-5 py-2.5 min-h-[44px] rounded-full hover:bg-sage-900 transition inline-flex items-center justify-center gap-2">
+                                            <span>Add this result to my message</span>
+                                            <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow-down"></use></svg>
+                                        </button>
+                                        <p class="text-sm font-semibold text-sage-800" data-add-confirm hidden>Added to your message.</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600">If you add this result to a message, only the total score is sent.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Questionnaire credit (standard wording: please leave it as it is) -->
+                    <p class="max-w-4xl mx-auto mt-4 text-center text-xs sm:text-sm text-sage-300">
+                        PHQ-9 and GAD-7 were developed by Drs Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission is required to reproduce them.
+                    </p>
                 </div>
 
-                <!-- Assessment Container Card -->
-                <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto shadow-2xl relative">
-                    
-                    <!-- Clinical Disclaimer Header -->
-                    <div class="bg-sand-100 border border-sand-300 p-4 rounded-2xl mb-8 flex items-start space-x-3 text-xs sm:text-sm text-slate-700">
-                        <i class="fa-solid fa-triangle-exclamation text-terracotta-500 text-lg mt-0.5 flex-shrink-0"></i>
-                        <p>
-                            <strong>Important Note:</strong> These questionnaires are screening tools to help guide reflection. They do not constitute an official medical diagnosis. If you are experiencing acute crisis or thoughts of self-harm, please contact <strong>Samaritans (116 123)</strong> or <strong>NHS 111</strong> immediately.
-                        </p>
-                    </div>
-
-                    <!-- PHQ Assessment Form -->
-                    <div id="phq-form-container" class="space-y-8">
-                        <div class="border-b border-slate-200 pb-4">
-                            <h3 class="serif-title text-2xl text-sage-900">PHQ Depression Self-Assessment</h3>
-                            <p class="text-xs sm:text-sm text-slate-500 mt-1">
-                                Over the <strong>last 2 weeks</strong>, how often have you been bothered by any of the following problems?
-                            </p>
+                <!-- URGENT HELP: always visible, also without JavaScript. Linked from the footer and from every "If you need help now" box.
+                     Please do not add services or change these numbers without checking them carefully first. -->
+                <section id="urgent-help" aria-labelledby="urgent-help-heading" class="max-w-4xl mx-auto mt-12 bg-sand-50 text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center text-xl flex-shrink-0">
+                            <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-heart"></use></svg>
                         </div>
-
-                        <form id="phq-form" class="space-y-6">
-                            <!-- Questions rendered dynamically or hardcoded for reliability -->
-                            <div class="space-y-6" id="phq-questions-list"></div>
-
-                            <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                <button type="button" onclick="calculatePHQ()" class="w-full sm:w-auto bg-sage-600 hover:bg-sage-700 text-white font-medium px-8 py-3.5 rounded-full shadow transition-all flex items-center justify-center space-x-2">
-                                    <i class="fa-solid fa-calculator"></i>
-                                    <span>Calculate Depression Score</span>
-                                </button>
-                                <button type="button" onclick="resetForm('phq')" class="text-xs text-slate-500 hover:text-slate-800 underline">
-                                    Reset Questionnaire
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- GAD-7 Assessment Form (Hidden by default) -->
-                    <div id="gad-form-container" class="space-y-8 hidden">
-                        <div class="border-b border-slate-200 pb-4">
-                            <h3 class="serif-title text-2xl text-sage-900">GAD-7 Anxiety Scale</h3>
-                            <p class="text-xs sm:text-sm text-slate-500 mt-1">
-                                Over the <strong>last 2 weeks</strong>, how often have you been bothered by the following anxiety symptoms?
-                            </p>
-                        </div>
-
-                        <form id="gad-form" class="space-y-6">
-                            <div class="space-y-6" id="gad-questions-list"></div>
-
-                            <div class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                <button type="button" onclick="calculateGAD()" class="w-full sm:w-auto bg-sage-600 hover:bg-sage-700 text-white font-medium px-8 py-3.5 rounded-full shadow transition-all flex items-center justify-center space-x-2">
-                                    <i class="fa-solid fa-calculator"></i>
-                                    <span>Calculate Anxiety Score</span>
-                                </button>
-                                <button type="button" onclick="resetForm('gad')" class="text-xs text-slate-500 hover:text-slate-800 underline">
-                                    Reset Questionnaire
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Assessment Result Modal / Display Box -->
-                    <div id="assessment-result" class="hidden mt-8 p-6 bg-sand-50 rounded-2xl border border-sage-200 space-y-4">
-                        <div class="flex items-center justify-between">
-                            <span id="result-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide"></span>
-                            <span class="text-xs text-slate-400">Assessment Result</span>
-                        </div>
-                        
                         <div>
-                            <h4 id="result-title" class="serif-title text-2xl text-sage-900">Your Calculated Score</h4>
-                            <p id="result-description" class="text-sm text-slate-600 mt-2 leading-relaxed"></p>
-                        </div>
-
-                        <div class="bg-white p-4 rounded-xl border border-sage-100 flex flex-col sm:flex-row items-center justify-between gap-3">
-                            <p class="text-xs text-slate-600">
-                                <i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i>
-                                Would you like to attach this result when contacting T.Marshall?
-                            </p>
-                            <a href="#contact" id="attach-score-btn" class="text-xs bg-sage-800 text-white font-medium px-4 py-2 rounded-full whitespace-nowrap hover:bg-sage-900 transition">
-                                Discuss with Counsellor <i class="fa-solid fa-arrow-down ml-1"></i>
-                            </a>
+                            <h3 id="urgent-help-heading" class="serif-title text-2xl sm:text-3xl text-sage-900">Need urgent help?</h3>
+                            <p class="text-base text-slate-700 mt-1">You do not have to wait for an appointment. If you need help now, these services are there for you.</p>
                         </div>
                     </div>
 
-                </div>
+                    <ul class="space-y-3">
+                        <li class="bg-white rounded-2xl border border-sage-200 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-sage-900 text-lg">999 or your nearest A&E</h4>
+                                <p class="text-base text-slate-700">If your life is at risk or you cannot keep yourself safe.</p>
+                            </div>
+                            <a href="tel:999" class="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-sage-700 hover:bg-sage-800 text-white text-lg font-bold whitespace-nowrap shadow-sm transition sm:flex-shrink-0">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                <span>Call 999</span>
+                            </a>
+                        </li>
+                        <li class="bg-white rounded-2xl border border-sage-200 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-sage-900 text-lg">NHS 111 (choose the mental health option)</h4>
+                                <p class="text-base text-slate-700">Urgent mental health help, 24 hours a day.</p>
+                            </div>
+                            <a href="tel:111" class="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-sage-700 hover:bg-sage-800 text-white text-lg font-bold whitespace-nowrap shadow-sm transition sm:flex-shrink-0">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                <span>Call 111</span>
+                            </a>
+                        </li>
+                        <li class="bg-white rounded-2xl border border-sage-200 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-sage-900 text-lg">Samaritans – 116 123</h4>
+                                <p class="text-base text-slate-700">Free, 24 hours a day, every day – to talk about anything that is troubling you. You can also email <a href="mailto:jo@samaritans.org" class="font-semibold text-sage-800 underline break-all">jo@samaritans.org</a>.</p>
+                            </div>
+                            <a href="tel:116123" class="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-sage-700 hover:bg-sage-800 text-white text-lg font-bold whitespace-nowrap shadow-sm transition sm:flex-shrink-0">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                <span>Call 116 123</span>
+                            </a>
+                        </li>
+                        <li class="bg-white rounded-2xl border border-sage-200 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-sage-900 text-lg">Shout – text SHOUT to 85258</h4>
+                                <p class="text-base text-slate-700">Free, 24 hours a day – if you would rather text than talk.</p>
+                            </div>
+                            <a href="sms:85258" class="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-sage-700 hover:bg-sage-800 text-white text-lg font-bold whitespace-nowrap shadow-sm transition sm:flex-shrink-0">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-envelope"></use></svg>
+                                <span>Text 85258</span>
+                            </a>
+                        </li>
+                        <li class="bg-white rounded-2xl border border-sage-200 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-sage-900 text-lg">PAPYRUS HOPELINE247 – 0800 068 4141</h4>
+                                <p class="text-base text-slate-700">For people under 35 having thoughts of suicide, and anyone worried about a young person.</p>
+                            </div>
+                            <a href="tel:08000684141" class="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-full bg-sage-700 hover:bg-sage-800 text-white text-lg font-bold whitespace-nowrap shadow-sm transition sm:flex-shrink-0">
+                                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                <span>Call 0800 068 4141</span>
+                            </a>
+                        </li>
+                        <li class="bg-white rounded-2xl border border-sage-200 p-4 sm:p-5">
+                            <h4 class="font-bold text-sage-900 text-lg">Your GP</h4>
+                            <p class="text-base text-slate-700">Ask your GP practice for an urgent appointment, or for its out-of-hours service when it is closed.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mt-6 text-base text-slate-700">T. Marshall cannot respond to emergencies through this website. Messages sent through the contact form may not be read for up to two working days.</p>
+                </section>
             </div>
         </section>
 
@@ -518,37 +634,43 @@
 
                 <div class="space-y-4" id="faq-accordion">
                     <!-- FAQ 1 -->
-                    <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-semibold text-sage-900 flex justify-between items-center hover:bg-sand-100/50 transition">
-                            <span>How do I know if counselling is right for me?</span>
-                            <i id="faq-icon-1" class="fa-solid fa-chevron-down text-sage-500 transition-transform"></i>
-                        </button>
-                        <div id="faq-answer-1" class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-sage-100 pt-3">
-                            If you are feeling overwhelmed, stuck, anxious, or facing challenging emotional circumstances, counselling provides a confidential space to process your thoughts and gain useful coping strategies.
+                    <details class="group bg-white rounded-2xl border border-sage-200 overflow-hidden shadow-sm">
+                        <summary class="block w-full text-left p-5 font-semibold text-sage-900 hover:bg-sand-100/50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex justify-between items-center gap-4">
+                                <span>How do I know if counselling is right for me?</span>
+                                <svg class="icon text-sage-500 transition-transform motion-reduce:transition-none group-open:rotate-180" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-chevron-down"></use></svg>
+                            </span>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-sage-100 pt-3">
+                            If you are feeling overwhelmed, stuck, or anxious, or are facing difficult emotional circumstances, counselling offers a confidential space to work through your thoughts and find useful ways of coping.
                         </div>
-                    </div>
+                    </details>
 
-                    <!-- FAQ 2 -->
-                    <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-semibold text-sage-900 flex justify-between items-center hover:bg-sand-100/50 transition">
-                            <span>How do group therapy sessions work?</span>
-                            <i id="faq-icon-2" class="fa-solid fa-chevron-down text-sage-500 transition-transform"></i>
-                        </button>
-                        <div id="faq-answer-2" class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-sage-100 pt-3">
-                            Group sessions cost £120/hour total for a group (minimum 8 participants, working out to £30 a head for a 2-hour format). Groups meet weekly or bi-weekly to discuss common goals, guided carefully by T.Marshall.
+                    <!-- FAQ 2 (PRICE: group therapy) -->
+                    <details class="group bg-white rounded-2xl border border-sage-200 overflow-hidden shadow-sm">
+                        <summary class="block w-full text-left p-5 font-semibold text-sage-900 hover:bg-sand-100/50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex justify-between items-center gap-4">
+                                <span>How do group therapy sessions work?</span>
+                                <svg class="icon text-sage-500 transition-transform motion-reduce:transition-none group-open:rotate-180" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-chevron-down"></use></svg>
+                            </span>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-sage-100 pt-3">
+                            Groups cost £30 per person for a two-hour session (minimum 8 people). They meet weekly or fortnightly to work towards shared goals, and I guide each session carefully.
                         </div>
-                    </div>
+                    </details>
 
                     <!-- FAQ 3 -->
-                    <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden shadow-sm">
-                        <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-semibold text-sage-900 flex justify-between items-center hover:bg-sand-100/50 transition">
-                            <span>What happens in our initial consultation?</span>
-                            <i id="faq-icon-3" class="fa-solid fa-chevron-down text-sage-500 transition-transform"></i>
-                        </button>
-                        <div id="faq-answer-3" class="hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-sage-100 pt-3">
-                            In your first £50 session, we discuss what brings you to therapy, what you hope to achieve, and ensure that my approach is comfortable and suitable for your journey.
+                    <details class="group bg-white rounded-2xl border border-sage-200 overflow-hidden shadow-sm">
+                        <summary class="block w-full text-left p-5 font-semibold text-sage-900 hover:bg-sand-100/50 transition cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex justify-between items-center gap-4">
+                                <span>What happens in the first session?</span>
+                                <svg class="icon text-sage-500 transition-transform motion-reduce:transition-none group-open:rotate-180" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-chevron-down"></use></svg>
+                            </span>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-sage-100 pt-3">
+                            In your first £50 session, we talk about what brings you to counselling and what you hope to achieve, and make sure my approach feels comfortable and right for you.
                         </div>
-                    </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -557,94 +679,152 @@
         <section id="contact" class="py-16 sm:py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-12">
-                    
+
                     <!-- Contact Info -->
                     <div class="lg:col-span-5 space-y-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-sage-600">Start Your Journey</span>
-                        <h2 class="serif-title text-3xl sm:text-4xl text-sage-900">Get in Touch with T.Marshall</h2>
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage-600">Contact</span>
+                        <h2 class="serif-title text-3xl sm:text-4xl text-sage-900">Get in Touch with T. Marshall</h2>
+                        <!-- REPLY TIME -->
                         <p class="text-slate-600 leading-relaxed">
-                            Taking the first step towards therapy can feel daunting. Feel free to send a message or request an initial session. I aim to respond within 24 business hours.
+                            Taking the first step towards counselling can feel daunting. Feel free to send a message or ask about a first session. I aim to reply within two working days.
                         </p>
 
                         <div class="space-y-4 pt-4">
+                            <!-- EMAIL -->
                             <div class="flex items-center space-x-4 p-4 rounded-2xl bg-sand-50 border border-sand-200">
-                                <div class="w-10 h-10 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center">
-                                    <i class="fa-solid fa-envelope"></i>
+                                <div class="w-10 h-10 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center flex-shrink-0">
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-envelope"></use></svg>
                                 </div>
-                                <div>
-                                    <p class="text-xs text-slate-500 font-medium">Email Direct</p>
-                                    <p class="text-sm font-semibold text-sage-900">contact@tmarshall-counselling.co.uk</p>
+                                <div class="min-w-0">
+                                    <p class="text-xs text-slate-600 font-medium">Email</p>
+                                    <a href="mailto:contact@tmarshallcounselling.co.uk" class="inline-flex items-center min-h-[44px] text-sm font-semibold text-sage-900 underline break-all">contact@tmarshallcounselling.co.uk</a>
                                 </div>
                             </div>
 
+                            <!-- PHONE NUMBER (hidden for now: the number that used to be here was a made-up placeholder).
+                                 To show a real phone number:
+                                   1. In the block below, replace 07XXX XXXXXX with the real number as you want people to see it,
+                                      and replace 07XXXXXXXXX (after tel:) with the same number written without spaces.
+                                   2. Delete these instruction lines, from the line starting "PHONE NUMBER" down to this one.
+                                   3. Delete the line "END OF PHONE NUMBER" under the block.
                             <div class="flex items-center space-x-4 p-4 rounded-2xl bg-sand-50 border border-sand-200">
-                                <div class="w-10 h-10 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center">
-                                    <i class="fa-solid fa-phone"></i>
+                                <div class="w-10 h-10 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center flex-shrink-0">
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
                                 </div>
-                                <div>
-                                    <p class="text-xs text-slate-500 font-medium">Phone Enquiries</p>
-                                    <p class="text-sm font-semibold text-sage-900">+44 (0)7700 900123</p>
+                                <div class="min-w-0">
+                                    <p class="text-xs text-slate-600 font-medium">Phone</p>
+                                    <a href="tel:07XXXXXXXXX" class="inline-flex items-center min-h-[44px] text-sm font-semibold text-sage-900 underline">07XXX XXXXXX</a>
                                 </div>
                             </div>
+                            END OF PHONE NUMBER -->
 
+                            <!-- SESSION OPTIONS -->
                             <div class="flex items-center space-x-4 p-4 rounded-2xl bg-sand-50 border border-sand-200">
-                                <div class="w-10 h-10 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center">
-                                    <i class="fa-solid fa-location-dot"></i>
+                                <div class="w-10 h-10 rounded-full bg-sage-100 text-sage-700 flex items-center justify-center flex-shrink-0">
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-location-dot"></use></svg>
                                 </div>
                                 <div>
-                                    <p class="text-xs text-slate-500 font-medium">Session Options</p>
-                                    <p class="text-sm font-semibold text-sage-900">Online Nationwide & Local Private Practice</p>
+                                    <p class="text-xs text-slate-600 font-medium">Session options</p>
+                                    <p class="text-sm font-semibold text-sage-900">In person or online; online sessions available nationwide</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- Contact Form -->
+                    <!-- Contact Form.
+                         The form posts to /contact.php on this website (never to an outside service).
+                         Do not rename the form, its id, or any name="..." attribute: the server checks them exactly. -->
                     <div class="lg:col-span-7">
                         <div class="bg-sand-50 p-6 sm:p-10 rounded-3xl border border-sage-200 shadow-sm">
-                            <h3 class="serif-title text-2xl text-sage-900 mb-6">Send a Confidential Message</h3>
+                            <h3 class="serif-title text-2xl text-sage-900">Send a Confidential Message</h3>
+                            <p class="mt-2 text-sm text-slate-600 flex items-start gap-2">
+                                <svg class="icon text-sage-600 mt-0.5" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-lock"></use></svg>
+                                <span>Your message is sent over an encrypted connection straight to T. Marshall’s own mailbox and is not shared with anyone else.</span>
+                            </p>
 
-                            <form action="https://formspree.io/f/xvkglyqj" method="POST">
+                            <!-- "If you need help now" box (short crisis box) -->
+                            <div class="mt-6 mb-6 bg-sand-100 border border-sand-300 p-4 rounded-2xl flex items-start gap-3 text-sm sm:text-base text-slate-700">
+                                <svg class="icon text-terracotta-500 text-lg mt-0.5" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                                <div class="space-y-2">
+                                    <p><strong>If you need help now.</strong> If you are in immediate danger or cannot keep yourself safe, call <a href="tel:999" class="font-bold text-sage-900 underline">999</a> or go to A&E. For urgent mental health help, call <a href="tel:111" class="font-bold text-sage-900 underline">NHS 111</a> and choose the mental health option. To talk to someone at any time, call <strong>Samaritans</strong> free on <a href="tel:116123" class="font-bold text-sage-900 underline">116 123</a>. This website and its contact form are not monitored for emergencies.</p>
+                                    <p><a href="#urgent-help" class="font-semibold text-sage-800 underline">More places to get urgent help</a></p>
+                                </div>
+                            </div>
+
+                            <form id="contact-form" action="/contact.php" method="post" class="space-y-4">
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
-                                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-sm bg-white" placeholder="Jane Doe">
+                                        <label for="cf-name" class="block text-sm font-semibold text-slate-700 mb-1">Your full name (required)</label>
+                                        <input type="text" id="cf-name" name="name" required maxlength="100" autocomplete="name" aria-describedby="cf-name-error" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-base bg-white aria-[invalid=true]:border-rose-600">
+                                        <p id="cf-name-error" class="mt-1 text-sm font-semibold text-rose-700" hidden></p>
                                     </div>
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
-                                        <input type="email" required class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-sm bg-white" placeholder="jane@example.com">
+                                        <label for="cf-email" class="block text-sm font-semibold text-slate-700 mb-1">Email address (required)</label>
+                                        <input type="email" id="cf-email" name="email" required maxlength="254" autocomplete="email" aria-describedby="cf-email-error" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-base bg-white aria-[invalid=true]:border-rose-600">
+                                        <p id="cf-email-error" class="mt-1 text-sm font-semibold text-rose-700" hidden></p>
                                     </div>
                                 </div>
 
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number (Optional)</label>
-                                        <input type="tel" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-sm bg-white" placeholder="07123 456789">
+                                        <label for="cf-phone" class="block text-sm font-semibold text-slate-700 mb-1">Phone number (optional)</label>
+                                        <input type="tel" id="cf-phone" name="phone" maxlength="30" autocomplete="tel" pattern="[0-9 +\(\)\-]*" aria-describedby="cf-phone-error" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-base bg-white aria-[invalid=true]:border-rose-600">
+                                        <p id="cf-phone-error" class="mt-1 text-sm font-semibold text-rose-700" hidden></p>
                                     </div>
                                     <div>
-                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Interested Service</label>
-                                        <select id="service-select" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-sm bg-white text-slate-700">
-                                            <option value="Individual Counselling">Individual Session (£50/hr)</option>
-                                            <option value="Group Therapy">Group Therapy (£120/hr base / £30 a head)</option>
-                                            <option value="General Enquiry">General Enquiry</option>
+                                        <label for="cf-service" class="block text-sm font-semibold text-slate-700 mb-1">Service you’re interested in</label>
+                                        <!-- PRICES (form options): only change the words between > and <, never the value="..." -->
+                                        <select id="cf-service" name="service" aria-describedby="cf-service-error" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-base bg-white text-slate-700 aria-[invalid=true]:border-rose-600">
+                                            <option value="General enquiry" selected>General enquiry</option>
+                                            <option value="One-to-one counselling">One-to-one counselling – £50 per 60-minute session</option>
+                                            <option value="Group therapy">Group therapy – £30 per person for a two-hour session (minimum 8 people)</option>
                                         </select>
+                                        <p id="cf-service-error" class="mt-1 text-sm font-semibold text-rose-700" hidden></p>
                                     </div>
                                 </div>
 
+                                <!-- Self-check result: only filled in if the visitor presses "Add this result to my message".
+                                     site.js shows the first heading for one result and the second for two. -->
+                                <input type="hidden" id="cf-assessment" name="assessment" value="" autocomplete="off">
+                                <div id="cf-assessment-summary" class="p-4 rounded-xl border border-sage-200 bg-white space-y-2" tabindex="-1" aria-labelledby="cf-assessment-heading" role="group" hidden>
+                                    <p id="cf-assessment-heading" class="text-sm font-semibold text-slate-700"><span data-heading-one>Self-check result added</span><span data-heading-many hidden>Self-check results added</span></p>
+                                    <ul class="space-y-2" data-assessment-list></ul>
+                                    <p class="text-sm text-slate-600">You chose to add what is shown here. It is only sent if you send this message, and you can remove it with the Remove button.</p>
+                                </div>
+                                <p id="cf-assessment-error" class="text-sm font-semibold text-rose-700" hidden></p>
+
                                 <div>
-                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Self-Assessment Summary (Optional)</label>
-                                    <input type="text" id="attached-score-input" class="w-full px-4 py-3 rounded-xl border border-sage-200 bg-slate-100 text-slate-600 text-xs" placeholder="No score attached yet (Complete assessment above to include)" readonly>
+                                    <label for="cf-message" class="block text-sm font-semibold text-slate-700 mb-1">Your message or preferred times (required)</label>
+                                    <textarea id="cf-message" name="message" required maxlength="5000" rows="4" aria-describedby="cf-message-error" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-base bg-white placeholder:text-slate-500 aria-[invalid=true]:border-rose-600" placeholder="A few lines and the days or times that suit you are plenty. There is no need to go into anything personal yet."></textarea>
+                                    <p id="cf-message-error" class="mt-1 text-sm font-semibold text-rose-700" hidden></p>
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Your Message or Preferred Times *</label>
-                                    <textarea required rows="4" class="w-full px-4 py-3 rounded-xl border border-sage-200 focus:ring-2 focus:ring-sage-500 focus:outline-none text-sm bg-white" placeholder="Briefly share what you would like support with or any preferred days/times..."></textarea>
+                                    <div class="flex items-start gap-3">
+                                        <input type="checkbox" id="cf-consent" name="consent" value="yes" required aria-describedby="cf-consent-error" class="mt-0.5 w-5 h-5 flex-shrink-0">
+                                        <label for="cf-consent" class="text-sm text-slate-700 leading-relaxed">I agree to T.Marshall Counselling using the details above, including anything about my health and any self-check result I have chosen to add, to reply to my enquiry. See the <a href="/privacy.html" class="font-semibold text-sage-800 underline">privacy notice</a>.</label>
+                                    </div>
+                                    <p id="cf-consent-error" class="mt-1 text-sm font-semibold text-rose-700" hidden></p>
                                 </div>
 
-                                <button type="submit" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3.5 rounded-full shadow-md transition-all flex items-center justify-center space-x-2">
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                    <span>Send Message</span>
+                                <!-- Spam trap: people never see or fill this in -->
+                                <div class="sr-only" aria-hidden="true">
+                                    <label for="cf-website">Leave this field empty</label>
+                                    <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off" value="">
+                                </div>
+                                <!-- Filled in by site.js when sending (left out entirely when JavaScript is off) -->
+                                <input type="hidden" id="cf-elapsed" name="elapsed" value="" disabled>
+
+                                <!-- Shown by site.js if sending fails. The second message is for when the website has paused the form. -->
+                                <div id="cf-status" class="p-4 rounded-xl bg-rose-50 border border-rose-200 text-sm text-rose-900" role="alert" tabindex="-1" hidden>
+                                    <p data-status-failed>Sorry, your message could not be sent just now. Please try again later, or email me directly at <a href="mailto:contact@tmarshallcounselling.co.uk" class="font-semibold underline break-all">contact@tmarshallcounselling.co.uk</a>.</p>
+                                    <p data-status-closed hidden>The form is not taking messages at the moment. Please email me directly at <a href="mailto:contact@tmarshallcounselling.co.uk" class="font-semibold underline break-all">contact@tmarshallcounselling.co.uk</a>.</p>
+                                </div>
+
+                                <button type="submit" id="cf-submit" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3.5 rounded-full shadow-md transition-all flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-paper-plane"></use></svg>
+                                    <span data-submit-label>Send message</span>
                                 </button>
                             </form>
                         </div>
@@ -660,8 +840,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 rounded-full bg-sage-600 text-white flex items-center justify-center">
-                        <i class="fa-solid fa-leaf text-sm"></i>
+                    <div class="w-8 h-8 rounded-full bg-sage-600 text-white flex items-center justify-center flex-shrink-0">
+                        <svg class="icon text-sm" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-leaf"></use></svg>
                     </div>
                     <div>
                         <span class="serif-title text-xl text-sand-100 block leading-tight">T.Marshall Counselling</span>
@@ -669,266 +849,49 @@
                     </div>
                 </div>
 
+                <!-- PRICES (footer) -->
                 <div class="text-xs text-sage-300 text-center md:text-right space-y-1">
-                    <p>1-to-1 Counselling: £50/hr | Group Therapy: £120/hr (£30/head min 8)</p>
-                    <p>Strictly Confidential • BACP Accredited Member (MBACP Accred)</p>
+                    <p>One-to-one counselling: £50 per 60-minute session • Group therapy: £30 per person for a two-hour session (minimum 8 people)</p>
+                    <p>Confidential, within the limits required by law and safeguarding • T. Marshall MBACP (Accred)</p>
                 </div>
             </div>
 
-            <div class="border-t border-sage-800 pt-6 text-center text-xs text-sage-400">
-                <p>&copy; 2026 T.Marshall Counselling. All rights reserved. Designed for therapeutic care.</p>
+            <nav aria-label="Footer" class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm">
+                <a href="#contact" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Contact</a>
+                <a href="#urgent-help" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Urgent help</a>
+                <a href="/privacy.html" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Privacy notice</a>
+            </nav>
+
+            <div class="border-t border-sage-800 pt-6 text-center text-xs text-sage-300">
+                <p>&copy; 2026 T.Marshall Counselling</p>
             </div>
         </div>
     </footer>
 
-    <!-- Success Message Modal -->
-    <div id="success-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
+    <!-- "Message received" dialog (opened by site.js after a message is sent) -->
+    <div id="success-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" hidden>
+        <div role="dialog" aria-modal="true" aria-labelledby="success-title" aria-describedby="success-text" tabindex="-1" class="bg-white rounded-3xl p-8 max-w-md w-full max-h-full overflow-y-auto text-center space-y-4 shadow-2xl focus:outline-none">
             <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
-                <i class="fa-solid fa-check"></i>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-check"></use></svg>
             </div>
-            <h3 class="serif-title text-2xl text-sage-900">Message Received</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
-                Thank you for reaching out. T.Marshall will review your message and reply promptly to schedule your consultation.
+            <h2 id="success-title" class="serif-title text-2xl text-sage-900">Message received</h2>
+            <p id="success-text" class="text-slate-600 text-sm leading-relaxed">
+                Thank you for getting in touch. I aim to reply within two working days. If you need help sooner, please use the numbers below.
             </p>
-            <button onclick="closeSuccessModal()" class="w-full bg-sage-600 text-white font-medium py-3 rounded-full hover:bg-sage-700 transition">
+
+            <div class="bg-sand-100 border border-sand-300 p-4 rounded-2xl flex items-start gap-3 text-sm sm:text-base text-slate-700 text-left">
+                <svg class="icon text-terracotta-500 text-lg mt-0.5" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-phone"></use></svg>
+                <div class="space-y-2">
+                    <p><strong>If you need help now.</strong> If you are in immediate danger or cannot keep yourself safe, call <a href="tel:999" class="font-bold text-sage-900 underline">999</a> or go to A&E. For urgent mental health help, call <a href="tel:111" class="font-bold text-sage-900 underline">NHS 111</a> and choose the mental health option. To talk to someone at any time, call <strong>Samaritans</strong> free on <a href="tel:116123" class="font-bold text-sage-900 underline">116 123</a>. This website and its contact form are not monitored for emergencies.</p>
+                    <p><a href="#urgent-help" class="font-semibold text-sage-800 underline">More places to get urgent help</a></p>
+                </div>
+            </div>
+
+            <button type="button" data-modal-close class="w-full bg-sage-600 text-white font-medium py-3 rounded-full hover:bg-sage-700 transition">
                 Close
             </button>
         </div>
     </div>
 
-    <script>
-        // PHQ Questionnaire Items
-        const phqQuestions = [
-            "Little interest or pleasure in doing things",
-            "Feeling down, depressed, or hopeless",
-            "Trouble falling or staying asleep, or sleeping too much",
-            "Feeling tired or having little energy",
-            "Poor appetite or overeating",
-            "Feeling bad about yourself — or that you are a failure",
-            "Trouble concentrating on things, such as reading or watching TV"
-        ];
-
-        // GAD-7 Questionnaire Items
-        const gadQuestions = [
-            "Feeling nervous, anxious, or on edge",
-            "Not being able to stop or control worrying",
-            "Worrying too much about different things",
-            "Trouble relaxing",
-            "Being so restless that it is hard to sit still",
-            "Becoming easily annoyed or irritable",
-            "Feeling afraid, as if something awful might happen"
-        ];
-
-        const options = [
-            { label: "Not at all", value: 0 },
-            { label: "Several days", value: 1 },
-            { label: "More than half the days", value: 2 },
-            { label: "Nearly every day", value: 3 }
-        ];
-
-        // Initialize Questionnaires on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            renderQuestionnaire('phq-questions-list', phqQuestions, 'phq');
-            renderQuestionnaire('gad-questions-list', gadQuestions, 'gad');
-        });
-
-        function renderQuestionnaire(containerId, questions, prefix) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = questions.map((q, idx) => `
-                <div class="bg-sand-50/70 p-4 rounded-2xl border border-sage-100 space-y-3">
-                    <p class="text-xs sm:text-sm font-semibold text-sage-900">${idx + 1}. ${q}</p>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                        ${options.map((opt) => `
-                            <label class="flex items-center space-x-2 bg-white px-3 py-2 rounded-xl border border-sage-200 hover:border-sage-400 cursor-pointer text-xs">
-                                <input type="radio" name="${prefix}_q${idx}" value="${opt.value}" class="text-sage-600 focus:ring-sage-500">
-                                <span class="text-slate-700">${opt.label}</span>
-                            </label>
-                        `).join('')}
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        // Tab Switching Logic
-        function switchAssessmentTab(tab) {
-            const phqTab = document.getElementById('tab-phq');
-            const gadTab = document.getElementById('tab-gad');
-            const phqCont = document.getElementById('phq-form-container');
-            const gadCont = document.getElementById('gad-form-container');
-
-            if (tab === 'phq') {
-                phqTab.className = "px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-sage-600 text-white shadow";
-                gadTab.className = "px-5 py-2.5 rounded-full text-sm font-medium transition-all text-sage-300 hover:text-white";
-                phqCont.classList.remove('hidden');
-                gadCont.classList.add('hidden');
-            } else {
-                gadTab.className = "px-5 py-2.5 rounded-full text-sm font-medium transition-all bg-sage-600 text-white shadow";
-                phqTab.className = "px-5 py-2.5 rounded-full text-sm font-medium transition-all text-sage-300 hover:text-white";
-                gadCont.classList.remove('hidden');
-                phqCont.classList.add('hidden');
-            }
-        }
-
-        // Calculate PHQ Score
-        function calculatePHQ() {
-            let score = 0;
-            let answered = 0;
-
-            for (let i = 0; i < phqQuestions.length; i++) {
-                const radios = document.getElementsByName(`phq_q${i}`);
-                for (const r of radios) {
-                    if (r.checked) {
-                        score += parseInt(r.value);
-                        answered++;
-                        break;
-                    }
-                }
-            }
-
-            if (answered < phqQuestions.length) {
-                alert("Please answer all questions to calculate an accurate score.");
-                return;
-            }
-
-            let badgeClass = "bg-emerald-100 text-emerald-800";
-            let severity = "Minimal Depression";
-            let desc = "Your responses suggest minimal or mild emotional distress. Speaking with a counsellor can help maintain well-being and build resilience.";
-
-            if (score >= 15) {
-                badgeClass = "bg-rose-100 text-rose-800";
-                severity = "Moderately Severe / Severe Depression Symptoms";
-                desc = "Your score indicates significant symptoms. We strongly recommend scheduling a consultation with T.Marshall or reaching out to a medical professional.";
-            } else if (score >= 10) {
-                badgeClass = "bg-amber-100 text-amber-800";
-                severity = "Moderate Depression Symptoms";
-                desc = "Your score reflects moderate depressive feelings. Therapy can offer valuable tools and relief.";
-            } else if (score >= 5) {
-                badgeClass = "bg-blue-100 text-blue-800";
-                severity = "Mild Depression Symptoms";
-                desc = "You are experiencing mild symptoms. Early therapeutic conversations can prevent symptoms from escalating.";
-            }
-
-            showResult(`PHQ Score: ${score} / 21 (${severity})`, desc, badgeClass, severity, `PHQ-7 Score: ${score}/21 (${severity})`);
-        }
-
-        // Calculate GAD-7 Score
-        function calculateGAD() {
-            let score = 0;
-            let answered = 0;
-
-            for (let i = 0; i < gadQuestions.length; i++) {
-                const radios = document.getElementsByName(`gad_q${i}`);
-                for (const r of radios) {
-                    if (r.checked) {
-                        score += parseInt(r.value);
-                        answered++;
-                        break;
-                    }
-                }
-            }
-
-            if (answered < gadQuestions.length) {
-                alert("Please answer all questions to calculate your GAD-7 score.");
-                return;
-            }
-
-            let badgeClass = "bg-emerald-100 text-emerald-800";
-            let severity = "Minimal Anxiety";
-            let desc = "Your anxiety levels appear low and manageable. Counselling can further enhance self-care techniques.";
-
-            if (score >= 15) {
-                badgeClass = "bg-rose-100 text-rose-800";
-                severity = "Severe Anxiety Symptoms";
-                desc = "Your responses indicate high anxiety levels. Professional counselling can guide you through grounding, anxiety reduction, and cognitive strategies.";
-            } else if (score >= 10) {
-                badgeClass = "bg-amber-100 text-amber-800";
-                severity = "Moderate Anxiety Symptoms";
-                desc = "Your score suggests moderate anxiety. Structured therapy sessions can help ease ongoing worry.";
-            } else if (score >= 5) {
-                badgeClass = "bg-blue-100 text-blue-800";
-                severity = "Mild Anxiety Symptoms";
-                desc = "Mild anxiety detected. Proactive support can help keep anxiety under control.";
-            }
-
-            showResult(`GAD-7 Score: ${score} / 21 (${severity})`, desc, badgeClass, severity, `GAD-7 Score: ${score}/21 (${severity})`);
-        }
-
-        function showResult(title, desc, badgeClass, badgeText, summaryText) {
-            const resBox = document.getElementById('assessment-result');
-            const resTitle = document.getElementById('result-title');
-            const resDesc = document.getElementById('result-description');
-            const resBadge = document.getElementById('result-badge');
-            const attachInput = document.getElementById('attached-score-input');
-
-            resTitle.textContent = title;
-            resDesc.textContent = desc;
-            resBadge.className = `px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${badgeClass}`;
-            resBadge.textContent = badgeText;
-            attachInput.value = summaryText;
-
-            resBox.classList.remove('hidden');
-            resBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function resetForm(prefix) {
-            for (let i = 0; i < 7; i++) {
-                const radios = document.getElementsByName(`${prefix}_q${i}`);
-                radios.forEach(r => r.checked = false);
-            }
-            document.getElementById('assessment-result').classList.add('hidden');
-            document.getElementById('attached-score-input').value = "";
-        }
-
-        function preselectService(serviceName) {
-            const select = document.getElementById('service-select');
-            if (select) {
-                select.value = serviceName;
-            }
-        }
-
-        function toggleFaq(id) {
-            const ans = document.getElementById(`faq-answer-${id}`);
-            const icon = document.getElementById(`faq-icon-${id}`);
-            if (ans.classList.contains('hidden')) {
-                ans.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                ans.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-            }
-        }
-
-        function handleContactSubmit(event) {
-            event.preventDefault();
-            document.getElementById('success-modal').classList.remove('hidden');
-        }
-
-        function closeSuccessModal() {
-            document.getElementById('success-modal').classList.add('hidden');
-            document.getElementById('contact-form').reset();
-        }
-
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // Function to dynamically upload & preview profile image
-        function previewProfilePhoto(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = document.getElementById('profile-img');
-                    if (img) {
-                        img.src = e.target.result;
-                    }
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-    </script>
 </body>
 </html>

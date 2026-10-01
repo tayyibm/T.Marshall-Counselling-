@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page not found | T.Marshall Counselling</title>
+    <meta name="description" content="Sorry, this page could not be found.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body class="bg-warm-pattern text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!--
+        This page is shown when someone visits an address on the website that does not exist.
+        Every link on it starts with "/" so it works whatever address was mistyped.
+    -->
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:text-sage-900 focus:px-4 focus:py-3 focus:rounded-full focus:shadow">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-sage-100/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between gap-4 h-20">
+                <!-- Brand Logo -->
+                <a href="/" class="flex items-center space-x-3 group">
+                    <span class="w-10 h-10 rounded-full bg-sage-500 text-white flex items-center justify-center shadow-sm group-hover:bg-sage-600 transition">
+                        <svg class="icon text-lg" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-leaf"></use></svg>
+                    </span>
+                    <span>
+                        <span class="serif-title text-xl sm:text-2xl font-normal tracking-wide text-sage-900 block leading-tight">T.Marshall</span>
+                        <span class="text-xs uppercase tracking-widest text-sage-600 font-medium">Counselling</span>
+                    </span>
+                </a>
+
+                <a href="/" class="inline-flex items-center gap-2 bg-white hover:bg-sand-100 text-sage-800 border border-sage-200 text-sm font-medium px-4 sm:px-5 py-3 rounded-full transition">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow-left"></use></svg>
+                    <span class="sm:hidden">Home</span>
+                    <span class="hidden sm:inline">Back to the home page</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="flex-grow">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+            <div class="bg-white rounded-3xl border border-sage-100 shadow-xl p-6 sm:p-10 text-center space-y-6">
+
+                <!-- Page not found -->
+                <div class="w-16 h-16 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto text-2xl">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-leaf"></use></svg>
+                </div>
+                <p class="text-xs font-bold uppercase tracking-wider text-sage-600">Page not found</p>
+                <h1 class="serif-title text-3xl sm:text-4xl text-sage-900 leading-tight">Sorry, this page isn’t here</h1>
+                <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                    It may have moved, or the address may have a small typo. Everything about counselling with T. Marshall is on the home page.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2">
+                    <a href="/" class="inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white px-7 py-3.5 rounded-full font-medium shadow-md hover:shadow-lg transition-all">
+                        <svg class="icon text-sm" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-arrow-left"></use></svg>
+                        <span>Back to the home page</span>
+                    </a>
+                    <a href="/#contact" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-sand-100 text-sage-800 border border-sage-200 px-7 py-3.5 rounded-full font-medium transition-all">
+                        <svg class="icon text-sage-600" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-envelope"></use></svg>
+                        <span>Get in touch</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sage-900 text-white border-t border-sage-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-full bg-sage-600 text-white flex items-center justify-center">
+                        <svg class="icon text-sm" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#i-leaf"></use></svg>
+                    </span>
+                    <span class="serif-title text-xl text-sand-100 leading-tight">T.Marshall Counselling</span>
+                </div>
+
+                <nav aria-label="Footer">
+                    <ul class="flex flex-wrap justify-center md:justify-end gap-x-6 text-sm">
+                        <li><a href="/" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Home</a></li>
+                        <li><a href="/#contact" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Contact</a></li>
+                        <li><a href="/#urgent-help" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Urgent help</a></li>
+                        <li><a href="/privacy.html" class="inline-flex items-center min-h-[44px] px-1 text-sand-100 underline hover:text-white focus-visible:outline-sand-100">Privacy notice</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="border-t border-sage-800 pt-6 text-center text-xs text-sage-300">
+                <p>&copy; 2026 T.Marshall Counselling</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
