@@ -129,19 +129,45 @@
     return null;
   }
 
+  // True when answers has exactly one answer (0-3) for every question of that questionnaire.
+  function completeAnswers(key, answers) {
+    var q = QUESTIONNAIRES[key];
+    return !!q && Array.isArray(answers) && answers.length === q.items.length &&
+      scoreAnswers(answers).missing.length === 0;
+  }
+
   // The one-line summary a visitor can choose to add to the contact form, e.g.
-  // "PHQ-9 score: 12/27 (moderate range)". The server accepts exactly this format.
-  // It carries only the total and its band, never single answers, so never question 9.
-  function summaryFor(key, total) {
-    var band = bandFor(key, total);
-    if (band === null) {
+  // "PHQ-9 score: 12/27 (moderate range), answers: 2,1,1,2,1,2,1,2,0".
+  // The server accepts exactly this format: the total, its band, then the answer to every question
+  // (0-3) in question order, separated by commas with no spaces. The server checks that the answers
+  // add up to the total and that the band is right for it.
+  // For the PHQ-9 this includes the answer to question 9, so the visitor is told so before they add it
+  // (see the result boxes in index.html and section 7 below).
+  // answers: one entry per question, each 0-3. Gives '' unless every question has an answer.
+  function summaryFor(key, answers) {
+    if (!completeAnswers(key, answers)) {
       return '';
     }
     var q = QUESTIONNAIRES[key];
-    return q.name + ' score: ' + total + '/' + q.max + ' (' + band + ' range)';
+    var total = scoreAnswers(answers).total;
+    return q.name + ' score: ' + total + '/' + q.max + ' (' + bandFor(key, total) + ' range), answers: ' +
+      answers.join(',');
   }
 
-  // What goes in the hidden "assessment" field: nothing, or one or two summaries joined by "; ".
+  // What the visitor sees in the contact form for a result they added, e.g.
+  // "PHQ-9 score: 12 out of 27 (moderate range), with your answers to all 9 questions".
+  function attachedTextFor(key, answers) {
+    if (!completeAnswers(key, answers)) {
+      return '';
+    }
+    var q = QUESTIONNAIRES[key];
+    var total = scoreAnswers(answers).total;
+    return q.name + ' score: ' + total + ' out of ' + q.max + ' (' + bandFor(key, total) + ' range), ' +
+      'with your answers to all ' + q.items.length + ' questions';
+  }
+
+  // What goes in the hidden "assessment" field: nothing, or one or two summaries joined by "; ",
+  // PHQ-9 first. attachedSummaries is e.g. { phq: summaryFor('phq', answers) }.
   function joinSummaries(attachedSummaries) {
     var parts = [];
     QUESTIONNAIRE_KEYS.forEach(function (key) {
@@ -259,7 +285,6 @@
       badgeText: band.charAt(0).toUpperCase() + band.slice(1) + ' range',
       badgeClass: BADGE_BASE + ' ' + badgeColour,
       text: text,
-      summary: summaryFor(key, total),
       question9: question9
     };
   }
@@ -272,7 +297,9 @@
       QUESTIONNAIRES: QUESTIONNAIRES,
       scoreAnswers: scoreAnswers,
       bandFor: bandFor,
+      completeAnswers: completeAnswers,
       summaryFor: summaryFor,
+      attachedTextFor: attachedTextFor,
       joinSummaries: joinSummaries,
       selfHarmAnswered: selfHarmAnswered,
       describeQuestions: describeQuestions,
@@ -483,7 +510,7 @@
    * 6. Questionnaires
    * ------------------------------------------------------------------ */
 
-  // The latest calculated total for each questionnaire, e.g. { phq: { total: 12 } }.
+  // The latest calculated result for each questionnaire, e.g. { phq: { total: 12, answers: [2, 1, ...] } }.
   var lastResults = {};
 
   // Classes for the questions this script draws (written in full for Tailwind).
@@ -689,13 +716,15 @@
   }
 
   // Fills in and shows a questionnaire's own result box, then moves focus to it.
-  function showResult(key, total, selfHarm) {
+  // answers: one answer (0-3) for every question.
+  function showResult(key, answers) {
     var box = byId(key + '-result');
-    var result = resultFor(key, total, selfHarm);
+    var total = scoreAnswers(answers).total;
+    var result = resultFor(key, total, key === 'phq' && selfHarmAnswered(answers));
     if (!box || !result) {
       return;
     }
-    lastResults[key] = { total: total };
+    lastResults[key] = { total: total, answers: answers.slice() };
 
     var badge = box.querySelector('[data-result-badge]');
     if (badge) {
@@ -719,6 +748,13 @@
       }
       setHidden(slot, !result.question9);
     }
+    // Directly above "Add this result to my message": the warning that the answer to question 9 would
+    // be sent too, and that a message is not a way to get help quickly. Only when question 9 is above 0.
+    var warning = box.querySelector('[data-q9-add-warning]');
+    setHidden(warning, !result.question9);
+    // Never offer to send the question 9 answer without that warning on screen: if it has been deleted
+    // from index.html, the offer is hidden for such a result (and addResultToMessage refuses it too).
+    setHidden(box.querySelector('[data-add-row]'), !addOffered || (result.question9 && !warning));
 
     updateAddConfirmations();
     setHidden(box, false);
@@ -756,6 +792,8 @@
       }
       // A result shown earlier no longer matches the answers, so it goes until Calculate is pressed again.
       hideResult(key);
+      delete lastResults[key];
+      dropAttachmentAfterChange(key);
       if (key === 'phq') {
         updateQuestion9Notice(form);
       }
@@ -772,7 +810,7 @@
         return;
       }
       hideMissing(note);
-      showResult(key, scored.total, key === 'phq' && selfHarmAnswered(answers));
+      showResult(key, answers);
     });
 
     // The form is being reset (the second press of "Reset questionnaire", or after a message is sent).
@@ -783,6 +821,7 @@
       hideMissing(note);
       hideResult(key);
       delete lastResults[key];
+      dropAttachmentAfterChange(key);
       if (key === 'phq') {
         clearQuestion9Notice();
       }
@@ -809,11 +848,16 @@
   /* ------------------------------------------------------------------
    * 7. "Add this result to my message"
    *    Calculating a score never puts it in the contact form. Only this button does, and the
-   *    visitor can take it out again with "Remove".
+   *    visitor can take it out again with "Remove". What is sent is the total, its range and the
+   *    answer to each question (see summaryFor); the result box says so before the button is pressed.
    * ------------------------------------------------------------------ */
 
-  // The summaries the visitor chose to add, e.g. { phq: 'PHQ-9 score: 12/27 (moderate range)' }.
+  // The answers behind each result the visitor chose to add, e.g. { phq: [2, 1, 1, 2, 1, 2, 1, 2, 0] }.
   var attached = {};
+
+  // True once initAddButtons has found the contact form's hidden field and visible list, so a result
+  // can be offered for adding.
+  var addOffered = false;
 
   var ATTACHED_ITEM_CLASS = 'flex flex-wrap items-center justify-between gap-2 bg-sand-50 rounded-lg px-3 py-1';
   var ATTACHED_TEXT_CLASS = 'text-sm text-slate-800';
@@ -827,7 +871,7 @@
         return;
       }
       var last = lastResults[key];
-      var isAttached = !!(last && attached[key] && attached[key] === summaryFor(key, last.total));
+      var isAttached = !!(last && attached[key] && summaryFor(key, attached[key]) === summaryFor(key, last.answers));
       setHidden(box.querySelector('[data-add-confirm]'), !isAttached);
     });
   }
@@ -838,9 +882,16 @@
     return box ? box.querySelector('[data-assessment-list]') : null;
   }
 
-  // Copies the attached summaries into the hidden field (what is sent) and the visible list.
+  // Copies the attached results into the hidden field (what is sent, in the server's format) and the
+  // visible list (in plain words).
   function renderAttachments() {
-    var value = joinSummaries(attached);
+    var summaries = {};
+    QUESTIONNAIRE_KEYS.forEach(function (key) {
+      if (attached[key]) {
+        summaries[key] = summaryFor(key, attached[key]);
+      }
+    });
+    var value = joinSummaries(summaries);
     var input = byId('cf-assessment');
     if (input) {
       input.value = value;
@@ -868,7 +919,7 @@
           removeAttachment(key);
         });
         list.appendChild(el('li', { 'class': ATTACHED_ITEM_CLASS }, [
-          el('span', { 'class': ATTACHED_TEXT_CLASS }, [attached[key]]),
+          el('span', { 'class': ATTACHED_TEXT_CLASS }, [attachedTextFor(key, attached[key])]),
           remove
         ]));
       });
@@ -880,11 +931,19 @@
 
   function addResultToMessage(key) {
     var last = lastResults[key];
-    var summary = last ? summaryFor(key, last.total) : '';
-    if (!summary || !attachmentList()) {
+    var answers = last ? last.answers : null;
+    if (!summaryFor(key, answers) || !attachmentList()) {
       return; // never fill the hidden field with nothing on screen to show for it
     }
-    attached[key] = summary;
+    // The answer to PHQ-9 question 9 is only ever added while the warning about it is on the page.
+    if (key === 'phq' && selfHarmAnswered(answers)) {
+      var resultBox = byId('phq-result');
+      if (!resultBox || !resultBox.querySelector('[data-q9-add-warning]')) {
+        return;
+      }
+    }
+    attached[key] = answers.slice();
+    clearRemovedNotes(false, key);
     renderAttachments();
     var box = byId('cf-assessment-summary');
     if (box && !isHidden(box)) {
@@ -904,6 +963,65 @@
   function clearAttachments() {
     attached = {};
     renderAttachments();
+    clearRemovedNotes(true);
+  }
+
+  // The screen-reader text is spoken once and then emptied after a few seconds, like the reset status,
+  // so someone reading through the page later does not hear it twice. One timer per questionnaire; a new
+  // message cancels the old timer first, so an old timer can never clear a newer message early.
+  var removedTimers = {};
+
+  function removedStatus(key) {
+    var form = byId(key + '-form');
+    return form ? form.querySelector('[data-removed-status]') : null;
+  }
+
+  function setRemovedStatus(key, message) {
+    var status = removedStatus(key);
+    if (removedTimers[key] !== undefined) {
+      window.clearTimeout(removedTimers[key]);
+      delete removedTimers[key];
+    }
+    if (!status) {
+      return;
+    }
+    status.textContent = message;
+    if (message) {
+      removedTimers[key] = window.setTimeout(function () {
+        delete removedTimers[key];
+        status.textContent = '';
+      }, RESET_CONFIRM_MS);
+    }
+  }
+
+  // Hides the notes about a result that was taken out (beside the questionnaire and in the contact
+  // form) and empties its screen-reader text. Adding a result again clears only that questionnaire's
+  // notes; clearAttachments clears them all. Missing elements are skipped quietly.
+  function clearRemovedNotes(all, key) {
+    QUESTIONNAIRE_KEYS.forEach(function (k) {
+      if (all || k === key) {
+        setHidden(byId(k + '-result-removed'), true);
+        setHidden(byId('cf-' + k + '-result-removed'), true);
+        setRemovedStatus(k, '');
+      }
+    });
+  }
+
+  // The answers of a questionnaire changed (or it was reset). If its result was added to the message,
+  // take it out again, so answers the visitor has changed or taken back can never be sent, and say so
+  // in a note beside that questionnaire and one in the contact form. Focus is not moved. The other
+  // questionnaire is left alone.
+  function dropAttachmentAfterChange(key) {
+    if (!attached[key]) {
+      return;
+    }
+    delete attached[key];
+    renderAttachments();
+    var visibleNote = byId(key + '-result-removed');
+    setHidden(visibleNote, false);
+    setHidden(byId('cf-' + key + '-result-removed'), false);
+    // The sr-only status text is what gets announced.
+    setRemovedStatus(key, visibleNote ? visibleNote.textContent.replace(/\s+/g, ' ').trim() : '');
   }
 
   function initAddButtons() {
@@ -923,6 +1041,7 @@
       });
       return;
     }
+    addOffered = true;
     forEachNode(document.querySelectorAll('[data-add-result]'), function (button) {
       button.addEventListener('click', function () {
         addResultToMessage(button.getAttribute('data-add-result'));

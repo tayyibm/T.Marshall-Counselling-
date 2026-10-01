@@ -9,16 +9,17 @@ Edit a file here on GitHub and save it with **Commit changes** on the **main** b
 ## Safe to change
 
 - **Wording:** any text *between* the tags in `index.html` and `privacy.html`. Change the words and leave everything inside `< >` alone.
-- **Prices:** press Ctrl+F (Cmd+F on a Mac) and search for `£`. Each price appears in several places (the description near the very top of the file that Google shows, the top of the page, price cards, FAQ, the contact form's list and the footer). Change every one so they all match.
+- **Prices:** press Ctrl+F (Cmd+F on a Mac) and search for `£`. Each price appears in several places (the description near the very top of the file that Google shows, the top of the page, price cards, FAQ, the contact form's list and the footer). That covers the £50 one-to-one session, the £30 first session (40 minutes) and the £30-per-person group wording ("groups of around 8"). Change every one so they all match.
 - **Your photo:** replace **both** `assets/img/t-marshall.jpg` and `assets/img/t-marshall.webp`, keeping those exact names. Please send new photos to your maintainer to resize first instead of uploading straight from your phone. Phone photos are too big for the website (very large files are skipped) and can carry hidden details, such as where they were taken.
 
 | To change… | Open | Look near the comment |
 |---|---|---|
 | The headline and welcome | `index.html` | `<!-- Hero Section -->` |
 | Your biography | `index.html` | `<!-- About Section -->` |
-| Services and prices | `index.html` | `<!-- Services & Fees Section -->` |
+| Services and prices (including the first-session price and the group wording) | `index.html` | `<!-- Services & Fees Section -->` |
 | FAQ answers | `index.html` | `<!-- FAQ Section -->` |
 | Contact text, or adding a phone number | `index.html` | `<!-- Contact Section -->` (follow the note there) |
+| How quickly you reply (“within a week” / “up to a week”) | `index.html`, `thanks.html` and `privacy.html` | The reply time appears in several places. Search each file for “a week” and change every one. Leave the questionnaire wording (“Over the last 2 weeks”) exactly as it is |
 | The privacy notice | `privacy.html` | Anywhere in the file, then change the "Last updated" date |
 
 ## Please don't
@@ -32,7 +33,7 @@ Edit a file here on GitHub and save it with **Commit changes** on the **main** b
 
 ## Before the site goes live
 
-`privacy.html` contains notes in double square brackets that start with the word CONFIRM. Four of them need your details: your full name, your ICO registration, how long you keep enquiries, and your own wording on the limits of confidentiality. The fifth, how long the hosting company keeps its visit logs, will be filled in by your maintainer. **While any of these notes remains, the live site will not update at all.**
+`privacy.html` contains notes in double square brackets that start with the word CONFIRM. Two notes remain: your ICO registration number (yours to fill in) and how long the hosting company keeps its visit log (your maintainer will fill this in). **While any of these notes remains, the live site will not update at all.**
 
 ## Undoing a mistake
 
