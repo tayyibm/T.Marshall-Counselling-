@@ -33,7 +33,7 @@ Edit a file here on GitHub and save it with **Commit changes** on the **main** b
 
 ## Before the site goes live
 
-`privacy.html` contains notes in double square brackets that start with the word CONFIRM. Two notes remain: your ICO registration number (yours to fill in) and how long the hosting company keeps its visit log (your maintainer will fill this in). **While any of these notes remains, the live site will not update at all.**
+`privacy.html` contains notes in double square brackets that start with the word CONFIRM. One note remains: your ICO registration number (yours to fill in). **While any of these notes remains, the live site will not update at all.**
 
 ## Undoing a mistake
 
