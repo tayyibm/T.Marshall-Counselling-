@@ -31,9 +31,16 @@ Edit a file here on GitHub and save it with **Commit changes** on the **main** b
 - **Don't change the emergency numbers** (999, NHS 111, Samaritans and the rest).
 - **The email address** is set on the server as well. Changing it in the text does not change where messages go, so ask your maintainer.
 
-## Before the site goes live
+## Notes in double square brackets
 
-`privacy.html` contains notes in double square brackets that start with the word CONFIRM. One note remains: your ICO registration number (yours to fill in). **While any of these notes remains, the live site will not update at all.**
+While the site was being built, facts still to be confirmed were marked in the pages as notes in double
+square brackets starting with the word CONFIRM. None remain. If you ever type such a note into any page,
+**the live site will stop updating until it is removed** (the publishing step refuses it on purpose, so an
+unfinished page can never go out).
+
+Your ICO (Information Commissioner's Office) registration number is not on the privacy notice yet. When you
+have it, ask your maintainer to add it, or add a line under "Who is responsible for your information" in
+`privacy.html`.
 
 ## Undoing a mistake
 
